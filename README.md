@@ -1,1 +1,2 @@
-基于thinkphp5 开发的物业管理系统1
+基于thinkphp5 开发的物业管理系统
+使用thinkcmf的模版
