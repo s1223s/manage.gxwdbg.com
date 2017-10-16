@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link href="__TMPL__/public/assets/themes/flatadmin/bootstrap.min.css" rel="stylesheet">
+		<link href="__TMPL__/public/assets/themes/flatadmin/main.css" rel="stylesheet">
+		<title></title>
+	</head>
+
+	<body>
+		<div class="main-content statistics">
+			<div class="sec1">
+				<form>
+					<div class="form-group">
+						<ul class="list-unstyled row">
+							<li class="col-md-3">
+								<label class="h4">
+							                   住房编号：
+						        </label>
+								<input type="text" name="" class="form-control" />
+							</li>
+							<li class="col-md-3">
+								<label class="h4">
+							                   业主姓名：
+						        </label>
+								<input type="text" name="" class="form-control" />
+							</li>
+							<li class="col-md-3">
+
+								<div class="col-md-6">
+									<label class="h4">
+							                   费用类型：
+						        </label>
+									<select>
+										<option value="">全部</option>
+										<option value="">水费</option>
+										<option value="">电费</option>
+										<option value="">维修</option>
+										<option value="">停车</option>
+										<option value="">其他</option>
+									</select>
+								</div>
+
+								<div class="col-md-6">
+									<label class="h4">
+							                   状态：
+						        </label>
+									<select>
+										<option value="">全部</option>
+										<option value="">已交</option>
+										<option value="">部分已交</option>
+										<option value="">未交</option>
+										<option value="">减免</option>
+									</select>
+								</div>
+							</li>
+							<li class="col-md-3" style="margin-top: 10px;">
+								<input type="text" name="" class="form-control" />
+								<button type="submit" class="btn btn-default">查询</button>
+							</li>
+						</ul>
+					</div>
+				</form>
+			</div>
+			<div class="sec2">
+				<div class="pull-right">
+					<form>
+						<label class="h4">每页显示</label>
+						<select>
+							<option>50</option>
+							<option>100</option>
+						</select>
+						<label class="h4">条</label>
+					</form>
+				</div>
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>住房编号</th>
+							<th>编号</th>
+							<th>业主姓名</th>
+							<th>时间</th>
+							<th>电费</th>
+							<th>水费</th>
+							<th>物业费</th>
+							<th>状态</th>
+							<th>已交</th>
+							<th>部分已交</th>
+							<th>未交</th>
+							<th>减免</th>
+							<th>合计</th>
+							<th>操作</th>
+							<th>备注</th>
+
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1-1-701</td>
+							<td>010101</td>
+							<td>***</td>
+							<td>2017-06-28</br>2017-07-27</td>
+							<td>200</td>
+							<td>60</td>
+							<td>150</td>
+							<td>已交</td>
+							<td>700</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>700</td>
+							<td>
+								<a href="#">
+									已交
+								</a>
+								<a href="#">
+									未交
+								</a>
+								<a href="#">
+									删除
+								</a>
+							</td>
+							<td>2017-8-8已交齐</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="pull-right">
+					<nav class="text-right page-nav">
+						<div class="pagination"><span id="Content_pager">
+									<a href="">上一页</a>&nbsp;&nbsp;&nbsp;
+									<span class="span">1</span>
+									<a href="" class="span">2</a>
+									<a href="" class="span">3</a>
+									<a href="">下一页</a>&nbsp;
+									</span>
+						</div>
+					</nav>
+				</div>
+			</div>
+
+		</div>
+
+	</body>
+
+</html>

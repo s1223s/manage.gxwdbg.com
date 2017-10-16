@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="__TMPL__/public/assets/themes/flatadmin/lq.datetimepick.css" />
+		<link href="__TMPL__/public/assets/themes/flatadmin/bootstrap.min.css" rel="stylesheet">
+		<link href="__TMPL__/public/assets/themes/flatadmin/main.css" rel="stylesheet">
+		<script src="__TMPL__/public/assets/js/jquery.js" type="text/javascript"></script>
+		<script src='__TMPL__/public/assets/js/selectUi.js' type='text/javascript'></script>
+		<script src='__TMPL__/public/assets/js/lq.datetimepick.js' type='text/javascript'></script>
+		<script src="__TMPL__/public/assets/js/bootstrap.min.js"></script>
+		<title></title>
+	</head>
+
+	<body>
+		<div class="main-content building-management registration-submitted row">
+			<div class="sec1 col-md-12">
+				<div class="col-md-12">
+					<div class="pull-left">
+						<p class="btn btn-default" id="submitted">
+							交房登记
+						</p>
+						<p class="btn btn-default" id="change">
+							更改交房日期
+						</p>
+					</div>
+					<div class="pull-right">
+						<form class="navbar-form" role="search" action="/search" method="get">
+							<div class="form-group">
+								<input name="k" type="text" class="form-control" placeholder="Please enter a keyword">
+							</div>
+							<button type="submit" class="btn btn-default">
+                               <img data-original="__TMPL__/public/assets/images/soso.png" src="__TMPL__/public/assets/images/icon_7.png" alt="__TMPL__/public/assets/images/soso.png" /></button>
+						</form>
+					</div>
+				</div>
+				<!--合同列表 内容 start-->
+				<div id="builing-content" class="">
+					<div class="col-md-12">
+						<div class="pull-right">
+							<label class="h4">每页显示</label>
+							<select>
+
+										<option value="">
+											50
+										</option>
+										<option value="">
+											100
+										</option>
+									</select>
+							<label class="h4">条</label>
+						</div>
+					</div>
+					<div class="sun-content">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th><input type="checkbox" id="checkAll" /></th>
+									<th>小区名称</th>
+									<th>区域</th>
+									<th>楼宇名称</th>
+									<th>房屋编号</th>
+									<th>建筑面积</th>
+									<th>业主姓名</th>
+									<th>交房时间</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><input type="checkbox" name="imgVo" value="${imgVo.fileName}" /></td>
+									<td>维也纳森林</td>
+									<td>北区</td>
+									<td>1号楼</td>
+									<td>1-2-701</td>
+									<td>194.17</td>
+									<td>***</td>
+									<td>2017-08-08</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="pull-right">
+							<nav class="text-right page-nav">
+								<div class="pagination"><span id="Content_pager">
+									<a href="">上一页</a>&nbsp;&nbsp;&nbsp;
+									<span class="span">1</span>
+									<a href="" class="span">2</a>
+									<a href="" class="span">3</a>
+									<a href="">下一页</a>&nbsp;
+									</span>
+								</div>
+							</nav>
+						</div>
+					</div>
+				</div>
+				
+
+				<div class="sec3">
+					<div class="building-add building-revise">
+						<div class="col-md-12 return-a">
+							<a href="registration.html">
+									返回列表
+							</a>
+						</div>
+						<div class="parking row">
+							<form action="" method="">
+								<div class="form-group col-sm-12">
+									<div class="col-sm-12">
+										<div class="col-sm-3">
+											<label>
+										   	房间：
+										   </label>
+										</div>
+										<div class="col-sm-9">
+											<form class="navbar-form" role="search" action="/search" method="get">
+												<div class="form-group">
+													<input name="k" type="text" class="form-control" placeholder="Please enter a keyword">
+												</div>
+												<button type="submit" class="btn btn-default">
+                                                <img data-original="__TMPL__/public/assets/images/soso.png" src="__TMPL__/public/assets/images/icon_7.png" alt="__TMPL__/public/assets/images/soso.png" /></button>
+											</form>
+										</div>
+									</div>
+									
+									<div class="col-sm-12">
+										<div class="col-sm-3">
+											<label>
+										   	业主姓名：
+										   </label>
+										</div>
+										<div class="col-sm-9">
+											<form class="navbar-form" role="search" action="/search" method="get">
+												<div class="form-group">
+													<input name="k" type="text" class="form-control" placeholder="Please enter a keyword">
+												</div>
+												<button type="submit" class="btn btn-default">
+                                                <img data-original="__TMPL__/public/assets/images/soso.png" src="__TMPL__/public/assets/images/icon_7.png" alt="__TMPL__/public/assets/images/soso.png" /></button>
+											</form>
+										</div>
+										
+									</div>
+									
+									<div class="col-sm-12">
+										<div class="col-sm-3">
+											<label>
+										   	交房日期：
+										   </label>
+										</div>
+										<div class="col-sm-9">
+											<input type="text" class="form-control" />
+										</div>
+									</div>
+									
+									<div class="col-md-12">
+									<div class="pull-right">
+										<button type="submit" class="btn btn-default">确定</button>
+										<button type="submit" class="btn btn-default export">确定</button>
+									</div>
+								</div>
+
+								</div>
+
+							</form>
+						</div>
+
+					</div>
+				</div>
+
+				<!--合同列表  内容 end-->
+			</div>
+		</div>
+		<!--	更改交房时间   start-->
+				<div class="sec2">
+					<div class="add-registration">
+						<div id="registration" class="col-sm-12">
+							<p class="h4">
+								更改交房时间
+							</p>
+							<form action="" method="">
+								<div class="col-md-12">
+									<label class="h4">房间代码：</label>
+									<input type="text" class="form-control" />
+								</div>
+								<div class="col-md-12">
+									<label class="h4">交房日期：</label>
+									<input type="text" class="form-control" id="Registrationtime" />
+								</div>
+								<div class="col-md-12">
+									<div class="pull-right">
+										<button type="submit" class="btn btn-default">确定</button>
+										<button type="submit" class="btn btn-default export">确定</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<!--	更改交房时间   end-->
+		<script>
+			$(function() {
+				$("#checkAll").click(function() {
+					$("input[name='imgVo']:checkbox").prop("checked", this.checked);
+				});
+				$('#change').click(function() {
+					$('.add-registration').css('display', 'block');
+					$('#builing-content').show();
+					$('.sec3').hide();
+				});
+				$('#submitted').click(function() {
+					$('.building-add').css('display', 'block');
+					$('#builing-content').hide();
+				});
+				$("#Registrationtime").on("click", function(e) {
+					e.stopPropagation();
+					$(this).lqdatetimepicker({
+						css: 'datetime-day',
+						dateType: 'D',
+						selectback: function() {}
+					});
+				});
+			});
+		</script>
+	</body>
+
+</html>

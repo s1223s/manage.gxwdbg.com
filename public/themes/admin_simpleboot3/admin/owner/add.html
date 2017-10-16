@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/assets/themes/{:cmf_get_admin_style()}/lq.datetimepick.css" />
+    <link href="__TMPL__/public/assets/themes/{:cmf_get_admin_style()}/bootstrap.min.css" rel="stylesheet">
+    <link href="__TMPL__/public/assets/themes/{:cmf_get_admin_style()}/main.css" rel="stylesheet">
+    <script src="__TMPL__/public/assets/js/jquery.js" type="text/javascript"></script>
+    <script src='__TMPL__/public/assets/js/selectUi.js' type='text/javascript'></script>
+    <script src='__TMPL__/public/assets/js/lq.datetimepick.js' type='text/javascript'></script>
+    <script src="__TMPL__/public/assets/js/bootstrap.min.js"></script>
+    <title></title>
+  </head>
+
+  <body>
+
+    <div class="check-box">
+      <div class="first-content">
+
+        <form action="{:url('owner/addpost')}" method="post">
+          <div class="form-group">
+            <label>
+              住户代码：
+            </label>
+            <input type="text" id="aownerid" name="ownerid" />
+          </div>
+          <div class="form-group">
+            <label>   
+              编号：
+            </label>
+            <input type="text" id="aownernumber" name="ownernumber" />
+          </div>
+          <div class="form-group">
+            <div class="district" style="margin-left: 278px;">
+              <label>   
+              小区：
+            </label>
+              <select>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
+            </div>
+
+            <div class="dong">
+              <label>   
+              栋：
+            </label>
+              <select>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
+            </div>
+            <div class="unit">
+              <label>   
+              单元：
+            </label>
+              <select>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
+            </div>
+            <div class="roomno">
+              <label>   
+              房号：
+            </label>
+              <select>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>
+              手机号码：
+            </label>
+            <input type="text" id="aphonenumber" name="phonenumber" />
+          </div>
+          <div class="form-group">
+            <label>
+              座机号码：
+            </label>
+            <input type="text" id="" />
+          </div>
+          <div class="form-group">
+            <label>
+              机主姓名：
+            </label>
+            <input type="text" id="aphonename" name="phonename" />
+          </div>
+          <div class="form-group">
+            <label>
+              银行账户：
+            </label>
+            <input type="text" id="aBankaccount" name="Bankaccount" />
+          </div>
+          <div class="form-group">
+            <label>
+              入伙日期：
+            </label>
+            <input type="text" name="aruhuodate" id="ruhuodate" />
+          </div>
+          <div class="form-group">
+            <label>
+              入住日期：
+            </label>
+            <input type="text" name="aCheckindate" id="Checkindate" />
+          </div>
+          <div class="form-group">
+            <label>
+              项目：
+            </label>
+            <input type="text" id="aproject" name="project" />
+          </div>
+          <div class="form-group">
+            <label>
+              垃圾费金额：
+            </label>
+            <input type="text" id="atrashfee" name="trashfee" />
+          </div>
+          <div class="form-group">
+            <label>
+              面积：
+            </label>
+            <input type="text" id="aarea" name="area" />
+          </div>
+          <div class="form-group">
+            <label>
+              其他垃圾费日期：
+            </label>
+            <input type="text" id="aOthertrashfeedate" name="Othertrashfeedate" />
+          </div>
+          <div class="form-group">
+            <label>
+              交物业费日期：
+            </label>
+            <input type="text" id="aPropertyfeedate" name="Propertyfeedate" />
+          </div>
+          <div class="form-group">
+            <label>
+              垃圾清运费：
+            </label>
+            <input type="text" id="aGarbageclearancefee" name="Garbageclearancefee" />
+          </div>
+          <div class="form-group">
+            <label>
+              备注：
+            </label>
+            <input type="text" id="aRemarks" name="Remarks" />
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-default">提交</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      $(function() {
+        $("#ruhuodate").on("click", function(e) {
+          e.stopPropagation();
+          $(this).lqdatetimepicker({
+            css: 'datetime-day',
+            dateType: 'D',
+            selectback: function() {}
+          });
+        });
+        $("#Checkindate").on("click", function(e) {
+          e.stopPropagation();
+          $(this).lqdatetimepicker({
+            css: 'datetime-day',
+            dateType: 'D',
+            selectback: function() {}
+          });
+        });
+        $("#aOthertrashfeedate").on("click", function(e) {
+          e.stopPropagation();
+          $(this).lqdatetimepicker({
+            css: 'datetime-day',
+            dateType: 'D',
+            selectback: function() {}
+          });
+        });
+        $("#aPropertyfeedate").on("click", function(e) {
+          e.stopPropagation();
+          $(this).lqdatetimepicker({
+            css: 'datetime-day',
+            dateType: 'D',
+            selectback: function() {}
+          });
+        });
+      });
+    </script>
+  </body>
+
+</html>

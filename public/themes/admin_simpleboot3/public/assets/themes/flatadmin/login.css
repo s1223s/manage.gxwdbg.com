@@ -1,0 +1,207 @@
+body {
+    background: #fff;
+}
+
+.wrap {
+    margin-top: 180px;
+}
+.login .content-box {
+	margin: 80px 0;
+}
+
+.login .logo-box img {
+	width: 60px;
+	height: 60px;
+	display: inline-block;
+}
+
+.login .logo-box {
+	margin-bottom: 20px;
+}
+
+.login .logo-box p {
+	display: inline-block;
+	font-family: '方正汉真广标简体';
+	font-weight: bold;
+	font-size: 24px;
+	font-style: italic;
+}
+
+.login .bg {
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+	display: block;
+	background-size: cover;
+}
+
+.login .content-box .sec2 .login-wrap {
+	position: relative;
+	padding: 25px;
+	box-shadow: 2px 2px 10px #000;
+}
+
+.login .content-box .sec2 .login-wrap p.h4 {
+	font-family: '方正汉真广标简体';
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	border-bottom: 1px solid #ff6600;
+	padding-bottom: 15px;
+	margin-bottom: 30px;
+}
+
+.form-group {
+	position: relative;
+	margin-top: 30px;
+}
+
+.login .content-box .sec2 .login-wrap span.icon-bg {
+	background-color: #dfdfdf;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	border: 1px solid #ccc;
+	vertical-align: middle;
+	padding: 4px;
+}
+
+.login .content-box .sec2 .login-wrap span.label-user {
+	position: absolute;
+	line-height: 42px;
+	height: 42px;
+	color: #999;
+	opacity: 1;
+	transition: all .2s ease-out;
+	-webkit-transition: all .2s ease-in;
+	-moz-transition: all .2s ease-out;
+	left: 50px;
+	top: 0;
+	font-size: 14px;
+}
+
+.login .content-box .sec2 .login-wrap .form-control {
+	display: inline-block;
+	width: 303px;
+	font-size: 14px;
+	line-height: 18px;
+	height: 37px;
+	padding: 11px 8px 11px 50px;
+	border: 1px solid #ddd;
+}
+
+.login .content-box .sec2 .login-wrap .form-control:focus .icon-bg {
+	background-color: #ff6600;
+}
+
+.login .content-box .sec2 {
+	background-color: #fff;
+	top: 300px;
+	position: absolute;
+	display: block;
+	z-index: 5;
+	right: 450px;
+}
+
+.form .item-fore1 {
+	z-index: 6;
+}
+
+.form .item-fore1,
+.form .item-fore2 {
+	border: 1px solid #dfdfdf;
+	height: 38px;
+	width: 304px;
+}
+
+.form .item {
+	position: relative;
+	margin-bottom: 20px;
+	z-index: 1;
+}
+
+.form .item .login-label {
+	position: absolute;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	width: 38px;
+	height: 36px;
+	border-right: 1px solid #dfdfdf;
+	background-color: #dfdfdf;
+}
+
+.form .item .login-label img {
+	padding: 2px 2px 2px 4px;
+}
+
+.form .itxt {
+	line-height: 18px;
+	height: 36px;
+	border: 0;
+	/*  padding: 18px 0 10px 50px;*/
+	padding: 0 0 0 50px;
+	width: 254px;
+	float: none;
+	overflow: hidden;
+	font-size: 14px;
+	font-family: '\5b8b\4f53';
+	color: #000;
+}
+
+.item-foucs {
+	border: 1px solid #ff6600;
+}
+
+.name-label {
+	background-color: #ff6600!important;
+	border: 1px solid #ff6600;
+}
+
+.form .code {
+	height: 38px;
+	border: 1px solid #dfdfdf;
+	vertical-align: middle;
+	width: 150px;
+	padding: 10px 0 10px 10px;
+}
+
+.form .code,
+.form .item-fore3 img,
+.form .item-fore3 p.code-point {
+	display: inline-block;
+}
+
+.form .item-fore3 p.code-point {
+	cursor: pointer;
+	font-size: 12px;
+	color: #898989;
+}
+
+.form .item-fore4 input[type=checkbox],
+.form .item-fore4 p {
+	display: inline-block;
+}
+
+.form .item-fore4 input[type=checkbox] {
+	background-color: #fff;
+}
+
+.form .item-fore4 p {
+	color: #898989;
+}
+
+.form .item-fore4 a {
+	margin-left: 15px;
+	color: #05cbfa;
+}
+
+.form .item-fore5 .btn-login {
+	border: none;
+	border-radius: 6px;
+	width: 100%;
+	height: 38px;
+	background: #ff6600;
+	color: #fff;
+	font-size: 18px;
+}

@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="__TMPL__/public/assets/themes/flatadmin/lq.datetimepick.css" />
+		<link href="__TMPL__/public/assets/themes/flatadmin/bootstrap.min.css" rel="stylesheet">
+		<link href="__TMPL__/public/assets/themes/flatadmin/main.css" rel="stylesheet">
+		<script src="__TMPL__/public/assets/js/jquery.js" type="text/javascript"></script>
+		<script src='__TMPL__/public/assets/js/selectUi.js' type='text/javascript'></script>
+		<script src='__TMPL__/public/assets/js/lq.datetimepick.js' type='text/javascript'></script>
+		<script src="__TMPL__/public/assets/js/bootstrap.min.js"></script>
+		<title></title>
+	</head>
+
+	<body>
+		<div class="main-content building-management roommeter readingmeter">
+			<ul class="nav nav-tabs" id="myTab">
+				<li class="active">
+					<a href="#survey" data-toggle="tab" class="survey">
+						进度概况
+					</a>
+				</li>
+				<li>
+					<a href="#detailed" data-toggle="tab" class="detailed">
+						抄表进度明细
+					</a>
+				</li>
+				<li>
+					<a href="#record" data-toggle="tab" class="record">
+						抄表历史记录
+					</a>
+				</li>
+				<li>
+					<a href="#share" data-toggle="tab" class="share">
+						分摊进度明细
+					</a>
+				</li>
+				<li>
+					<a href="#result" data-toggle="tab" class="result">
+						分摊结果
+					</a>
+				</li>
+			</ul>
+			<div id="myTabContent" class="tab-content">
+				<div class="tab-pane fade in active" id="survey">
+					<div class="main-content statistics three-statistics">
+						<div class="sec1">
+							<form>
+								<div class="form-group">
+									<ul class="list-unstyled row">
+										<li class="col-md-4">
+
+											<label class="h4">
+							                                            月份
+						                    </label>
+											<input type="text" name="datepicker" id="datetimepicker1" class="form-control" value="2017-02-04" />
+
+										</li>
+										<li class="col-md-4">
+											<label class="h4">
+							                                              仪表种类
+						                    </label>
+											<select>
+													<option>(全部)</option>
+													<option>水表</option>
+													<option>电表</option>
+													<option>气表</option>
+												</select>
+										</li>
+										<li class="col-md-4">
+											<label class="h4">
+							                                                        管理区
+						                        </label>
+											<select>
+													<option>丽景花园</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+												</select>
+										</li>
+
+									</ul>
+								</div>
+							</form>
+							<div class="warp-content">
+								<div class="water-block">
+									<div class="col-sm-12" style="margin-bottom: 20px;">
+										<div class="pull-left">
+											<button type="submit" class="btn btn-default btn-input">从EXCEL导入</button>
+											<button type="submit" class="btn btn-default btn-white btn-input">批量录入</button>
+										</div>
+										<a href="" class="download">
+											下载公摊仪表抄表数据模版
+										</a>
+
+									</div>
+
+									<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th>仪表种类</th>
+												<th>总数</th>
+												<th>已抄表</th>
+												<th>未抄表</th>
+												<th>抄表进度</th>
+												<th>已分摊</th>
+												<th>未分摊</th>
+												<th>分摊进度</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>电表</td>
+												<td>2</td>
+												<td>0</td>
+												<td>2</td>
+												<td>
+													<div class="progress">
+														<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:20%">20%</div>
+													</div>
+												</td>
+												<td>0</td>
+												<td>0</td>
+												<td>
+													<div class="progress">
+														<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:20%">20%</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>电表</td>
+												<td>2</td>
+												<td>0</td>
+												<td>2</td>
+												<td>
+													<div class="progress">
+														<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:20%">20%</div>
+													</div>
+												</td>
+												<td>0</td>
+												<td>0</td>
+												<td>
+													<div class="progress">
+														<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:20%">20%</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>电表</td>
+												<td>2</td>
+												<td>0</td>
+												<td>2</td>
+												<td>
+													<div class="progress">
+														<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:20%">20%</div>
+													</div>
+												</td>
+												<td>0</td>
+												<td>0</td>
+												<td>
+													<div class="progress">
+														<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:20%">20%</div>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+
+									</table>
+									<div class="page-container">
+										<ul class="list-unstyled">
+											<li>
+												<a href="">
+													<img src="__TMPL__/public/assets/images/page-a.png" />
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<img src="__TMPL__/public/assets/images/page-aa.png" />
+												</a>
+											</li>
+											<li>
+												<span>1</span>
+											</li>
+											<li>
+												<a href="">
+													<img src="__TMPL__/public/assets/images/page-bb.png" />
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<img src="__TMPL__/public/assets/images/page-b.png" />
+												</a>
+											</li>
+											<div class="page-content">
+												<select>
+											<option>20</option>
+											<option>50</option>
+											<option>100</option>
+									</select>
+												<label>
+											每页
+										</label>
+											</div>
+
+										</ul>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane fade in" id="detailed">
+					<div class="main-content statistics three-statistics">
+						<div class="sec1">
+							<form>
+								<div class="form-group">
+									<ul class="list-unstyled row">
+										<li class="col-md-4">
+
+											<label class="h4">
+							                                            月份
+						                    </label>
+											<input type="text" name="datepicker" id="datetimepicker2" class="form-control" value="2017-02-04" />
+
+										</li>
+										<li class="col-md-4">
+											<label class="h4">
+							                                              仪表种类
+						                    </label>
+											<select>
+													<option>(全部)</option>
+													<option>水表</option>
+													<option>电表</option>
+													<option>气表</option>
+												</select>
+										</li>
+										<li class="col-md-4">
+											<label class="h4">
+							                                                        管理区
+						                        </label>
+											<select>
+													<option>丽景花园</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+												</select>
+										</li>
+
+									</ul>
+								</div>
+							</form>
+							<div class="warp-content">
+								<div class="water-block">
+									<div class="col-sm-12">
+										<div class="pull-left">
+											<ul class="list-unstyled">
+												<li>
+													<p>
+														仪表总数 <span>2</span>
+													</p>
+												</li>
+												<li>
+													<p>
+														已抄表 <span>0</span>
+													</p>
+												</li>
+												<li>
+													<p>
+														未抄表 <span>2</span>
+													</p>
+												</li>
+											</ul>
+										</div>
+										
+
+									</div>
+									<div class="col-sm-12"  style="margin-bottom: 20px;">
+										<div class="pull-left">
+											<button type="submit" class="btn btn-default btn-input">从EXCEL导入</button>
+											<button type="submit" class="btn btn-default btn-white">批量录入</button>
+											<button type="submit" class="btn btn-default btn-white">导出EXCEL</button>
+										</div>
+										<a href="" class="download">
+											下载公摊仪表抄表数据模版
+										</a>
+
+									</div>
+
+									<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th>仪表种类</th>
+												<th>上次抄表时间</th>
+												<th>本次抄表时间</th>
+												<th>上次读数</th>
+												<th>本次读数</th>
+												<th>倍率</th>
+												<th>用量</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>2栋电梯电费分摊</td>
+												<td>2016-06-30</td>
+												<td></td>
+												<td>1.267.00</td>
+												<td></td>
+												<td>10.00</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>2栋电梯电费分摊</td>
+												<td>2016-06-30</td>
+												<td></td>
+												<td>1.267.00</td>
+												<td></td>
+												<td>10.00</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>2栋电梯电费分摊</td>
+												<td>2016-06-30</td>
+												<td></td>
+												<td>1.267.00</td>
+												<td></td>
+												<td>10.00</td>
+												<td></td>
+											</tr>
+										</tbody>
+
+									</table>
+									<div class="page-container">
+										<ul class="list-unstyled">
+											<li>
+												<a href="">
+													<img src="__TMPL__/public/assets/images/page-a.png" />
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<img src="__TMPL__/public/assets/images/page-aa.png" />
+												</a>
+											</li>
+											<li>
+												<span>1</span>
+											</li>
+											<li>
+												<a href="">
+													<img src="__TMPL__/public/assets/images/page-bb.png" />
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<img src="__TMPL__/public/assets/images/page-b.png" />
+												</a>
+											</li>
+											<div class="page-content">
+												<select>
+											<option>20</option>
+											<option>50</option>
+											<option>100</option>
+									</select>
+												<label>
+											每页
+										</label>
+											</div>
+
+										</ul>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="tab-pane fade in" id="record">
+					<div class="main-content statistics three-statistics">
+						<div class="sec1">
+							<form>
+								<div class="form-group">
+									<ul class="list-unstyled row">
+										<li class="col-md-4">
+
+											<label class="h4">
+							                                            月份
+						                    </label>
+											<input type="text" name="datepicker" id="datetimepicker3" class="form-control" value="2017-02-04" />
+
+										</li>
+										<li class="col-md-4">
+											<label class="h4">
+							                                              仪表种类
+						                    </label>
+											<select>
+													<option>(全部)</option>
+													<option>水表</option>
+													<option>电表</option>
+													<option>气表</option>
+												</select>
+										</li>
+										<li class="col-md-4">
+											<label class="h4">
+							                                                        管理区
+						                        </label>
+											<select>
+													<option>丽景花园</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+												</select>
+										</li>
+
+									</ul>
+								</div>
+							</form>
+							<div class="warp-content">
+								<div class="water-block">
+									<div class="col-sm-12" style="margin-bottom: 20px;">
+										<div class="pull-left">
+											<button type="submit" class="btn btn-default btn-input">从EXCEL导入</button>
+											<button type="submit" class="btn btn-default btn-white">批量录入</button>
+											<button type="submit" class="btn btn-default btn-white">删除</button>
+											<button type="submit" class="btn btn-default btn-white">导出EXCEL</button>
+										</div>
+										<a href="" class="download">
+											下载公摊仪表抄表数据模版
+										</a>
+
+									</div>
+
+									<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th>仪表种类</th>
+												<th>上次抄表时间</th>
+												<th>本次抄表时间</th>
+												<th>上次读数</th>
+												<th>本次读数</th>
+												<th>倍率</th>
+												<th>用量</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>2栋电梯电费分摊</td>
+												<td>2016-06-30</td>
+												<td></td>
+												<td>1.267.00</td>
+												<td></td>
+												<td>10.00</td>
+												<td></td>
+											</tr>
+
+										</tbody>
+
+									</table>
+									<div class="page-container">
+										<ul class="list-unstyled">
+											<li>
+												<a href="">
+													<img src="__TMPL__/public/assets/images/page-a.png" />
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<img src="__TMPL__/public/assets/images/page-aa.png" />
+												</a>
+											</li>
+											<li>
+												<span>1</span>
+											</li>
+											<li>
+												<a href="">
+													<img src="__TMPL__/public/assets/images/page-bb.png" />
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<img src="__TMPL__/public/assets/images/page-b.png" />
+												</a>
+											</li>
+											<div class="page-content">
+												<select>
+											<option>20</option>
+											<option>50</option>
+											<option>100</option>
+									</select>
+												<label>
+											每页
+										</label>
+											</div>
+
+										</ul>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane fade in" id="share">
+					<div class="main-content statistics three-statistics">
+						<div class="sec1">
+							<form>
+								<div class="form-group">
+									<ul class="list-unstyled row">
+										<li class="col-md-4">
+
+											<label class="h4">
+							                                            月份
+						                    </label>
+											<input type="text" name="datepicker" id="datetimepicker4" class="form-control" value="2017-02-04" />
+
+										</li>
+										<li class="col-md-4">
+											<label class="h4">
+							                                              仪表种类
+						                    </label>
+											<select>
+													<option>(全部)</option>
+													<option>水表</option>
+													<option>电表</option>
+													<option>气表</option>
+												</select>
+										</li>
+										<li class="col-md-4">
+											<label class="h4">
+							                                                        管理区
+						                        </label>
+											<select>
+													<option>丽景花园</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+												</select>
+										</li>
+
+									</ul>
+								</div>
+							</form>
+							<div class="warp-content">
+								<div class="water-block">
+									<div class="pull-left">
+											<ul class="list-unstyled">
+												<li>
+													<p>
+														已抄表 <span>2</span>
+													</p>
+												</li>
+												<li>
+													<p>
+														已分摊 <span>0</span>
+													</p>
+												</li>
+												<li>
+													<p>
+														未分摊 <span>2</span>
+													</p>
+												</li>
+											</ul>
+										</div>
+									<div class="col-sm-12" style="margin-bottom: 20px;">
+										<div class="pull-left">
+											<button type="submit" class="btn btn-default btn-white btn-apportioned">已分摊</button>
+											<button type="submit" class="btn btn-default btn-white btn-undistributed">未分摊</button>
+											<button type="submit" class="btn btn-default btn-white btn-batchallocation">批量分摊</button>
+										</div>
+										<a href="" class="download">
+											下载公摊仪表抄表数据模版
+										</a>
+
+									</div>
+
+									<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th>仪表种类</th>
+												<th>上次抄表时间</th>
+												<th>本次抄表时间</th>
+												<th>上次读数</th>
+												<th>本次读数</th>
+												<th>倍率</th>
+												<th>用量</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>2栋电梯电费分摊</td>
+												<td>2016-06-30</td>
+												<td></td>
+												<td>1.267.00</td>
+												<td></td>
+												<td>10.00</td>
+												<td></td>
+											</tr>
+
+										</tbody>
+
+									</table>
+									<div class="page-container">
+										<ul class="list-unstyled">
+											<li>
+												<a href="">
+													<img src="__TMPL__/public/assets/images/page-a.png" />
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<img src="__TMPL__/public/assets/images/page-aa.png" />
+												</a>
+											</li>
+											<li>
+												<span>1</span>
+											</li>
+											<li>
+												<a href="">
+													<img src="__TMPL__/public/assets/images/page-bb.png" />
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<img src="__TMPL__/public/assets/images/page-b.png" />
+												</a>
+											</li>
+											<div class="page-content">
+												<select>
+											<option>20</option>
+											<option>50</option>
+											<option>100</option>
+									</select>
+												<label>
+											每页
+										</label>
+											</div>
+
+										</ul>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane fade in" id="result">
+					<div class="main-content statistics three-statistics">
+						<div class="sec1">
+							<form>
+								<div class="form-group">
+									<ul class="list-unstyled row">
+										<li class="col-md-2">
+											<label class="h4">
+							                                                        管理区
+						                        </label>
+											<select>
+													<option>丽景花园</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+												</select>
+										</li>
+										<li class="col-md-2">
+											<label class="h4">
+							                                              仪表种类
+						                    </label>
+											<select>
+													<option>(全部)</option>
+													<option>水表</option>
+													<option>电表</option>
+													<option>气表</option>
+												</select>
+										</li>
+										<li class="col-md-2">
+											<label class="h4">
+							                                         抄表日期
+						                    </label>
+											<input type="text" name="datepicker" id="datetimepicker5" class="form-control" value="2017-02-04" />
+
+										</li>
+										<li class="col-md-2">
+											<label class="h4">
+							                                              仪表名称
+						                    </label>
+						                    <input type="text" class="form-control" placeholder="请输入仪表名称">
+										</li>
+										<li class="col-md-2">
+											<label class="h4">
+							                                              客户
+						                    </label>
+						                    <input type="text" class="form-control" placeholder="请输入客户">
+										</li>
+										
+										<li class="col-md-2">
+											<label class="h4">
+							                                              房间代码
+						                    </label>
+						                    <input type="text" class="form-control" placeholder="请输入房间代码">
+										</li>
+										
+										
+									</ul>
+								</div>
+							</form>
+							<div class="warp-content">
+								<div class="water-block">
+									<div class="col-sm-12" style="margin-bottom: 20px;">
+										<div class="pull-right">
+											<button type="submit" class="btn btn-primary">搜索</button>
+											<button type="submit" class="btn btn-primary btn-white">重置</button>
+										</div>
+										
+
+									</div>
+
+									<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th>公摊仪表名称</th>
+												<th>种类</th>
+												<th>抄表日期</th>
+												<th>用量</th>
+												<th>客户</th>
+												<th>房间代码</th>
+												<th>房间仪表</th>
+												<th>分摊</th>
+												<th>分摊方式</th>
+												<th>分摊日期</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>2栋电梯电费分摊</td>
+												<td>公摊表</td>
+												<td>2016-06-06</td>
+												<td>1.267.00</td>
+												<td>陈芬</td>
+												<td>2-1-1-2</td>
+												<td></td>
+												<td>231.28</td>
+												<td>按建筑面基分摊</td>
+												<td></td>
+											</tr>
+
+										</tbody>
+
+									</table>
+									<div class="page-container">
+										<ul class="list-unstyled">
+											<li>
+												<a href="">
+													<img src="__TMPL__/public/assets/images/page-a.png" />
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<img src="__TMPL__/public/assets/images/page-aa.png" />
+												</a>
+											</li>
+											<li>
+												<span>1</span>
+											</li>
+											<li>
+												<a href="">
+													<img src="__TMPL__/public/assets/images/page-bb.png" />
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<img src="__TMPL__/public/assets/images/page-b.png" />
+												</a>
+											</li>
+											<div class="page-content">
+												<select>
+											<option>20</option>
+											<option>50</option>
+											<option>100</option>
+									</select>
+												<label>
+											每页
+										</label>
+											</div>
+
+										</ul>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<script>
+			$(function() {
+				$('#myTab li:eq(0) a').tab('show');
+				//当点击出现一个新建页面时，可以用此方法
+				$('.btn-input').click(function() {
+					var url = 'readinginput.html';
+					window.location.href = url + '?returnUrl=http://wip2.coevery.cn/Coevery.Contract/Contract';
+				});
+				$("#checkAll").click(function() {
+					$("input[name='imgVo']:checkbox").prop("checked", this.checked);
+				});
+				$("#datetimepicker1").on("click", function(e) {
+					e.stopPropagation();
+					$(this).lqdatetimepicker({
+						css: 'datetime-day',
+						dateType: 'D',
+						selectback: function() {}
+					});
+				});
+				$("#datetimepicker2").on("click", function(e) {
+					e.stopPropagation();
+					$(this).lqdatetimepicker({
+						css: 'datetime-day',
+						dateType: 'D',
+						selectback: function() {}
+					});
+				});
+				$("#datetimepicker3").on("click", function(e) {
+					e.stopPropagation();
+					$(this).lqdatetimepicker({
+						css: 'datetime-day',
+						dateType: 'D',
+						selectback: function() {}
+					});
+				});
+				$("#datetimepicker4").on("click", function(e) {
+					e.stopPropagation();
+					$(this).lqdatetimepicker({
+						css: 'datetime-day',
+						dateType: 'D',
+						selectback: function() {}
+					});
+				});
+				$("#datetimepicker5").on("click", function(e) {
+					e.stopPropagation();
+					$(this).lqdatetimepicker({
+						css: 'datetime-day',
+						dateType: 'D',
+						selectback: function() {}
+					});
+				});
+			});
+		</script>
+	</body>
+
+</html>

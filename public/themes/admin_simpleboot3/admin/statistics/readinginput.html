@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="__TMPL__/public/assets/themes/flatadmin/lq.datetimepick.css" />
+		<link href="__TMPL__/public/assets/themes/flatadmin/bootstrap.min.css" rel="stylesheet">
+		<link href="__TMPL__/public/assets/themes/flatadmin/main.css" rel="stylesheet">
+		<script src="__TMPL__/public/assets/js/jquery.js" type="text/javascript"></script>
+		<script src='__TMPL__/public/assets/js/selectUi.js' type='text/javascript'></script>
+		<script src='__TMPL__/public/assets/js/lq.datetimepick.js' type='text/javascript'></script>
+		<script src="__TMPL__/public/assets/js/bootstrap.min.js"></script>
+		<title></title>
+	</head>
+
+	<body>
+		<div class="main-content building-management roommeter batchinput readingmeter">
+			<div class="main-content statistics three-statistics">
+				<div class="sec1">
+					<form>
+						<div class="form-group">
+							<ul class="list-unstyled row">
+								<li class="col-md-4">
+
+									<label class="h4">
+							                                            月份
+						                    </label>
+									<input type="text" name="datepicker" id="datetimepicker1" class="form-control" value="2017-02-04" />
+
+								</li>
+								<li class="col-md-4">
+									<label class="h4">
+							                                              仪表种类
+						                    </label>
+									<select>
+													<option>(全部)</option>
+													<option>水表</option>
+													<option>电表</option>
+													<option>气表</option>
+												</select>
+								</li>
+								<li class="col-md-4">
+									<label class="h4">
+							                                                        管理区
+						                        </label>
+									<select>
+													<option>丽景花园</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+												</select>
+								</li>
+
+							</ul>
+						</div>
+					</form>
+					<div class="warp-content">
+						<div class="water-block">
+							<div class="col-sm-12 garden">
+								<div class="pull-left">
+									<p>
+										<span>
+											您当前的操作是2017年9月房间仪表读数批量录入；温馨提示：翻页和离开页面之前一定要保存数据以免数据丢失！
+										</span>
+
+									</p>
+								</div>
+								<div class="pull-right">
+									<button type="submit" class="btn btn-primary btn-search">搜索</button>
+									<button type="submit" class="btn btn-primary btn-white btn-reset">重置</button>
+								</div>
+							</div>
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th>仪表名称</th>
+										<th>上次抄表时间</th>
+										<th>本次抄表时间</th>
+										<th>上次读数</th>
+										<th>本期读数</th>
+										<th>倍率</th>
+										<th>用量</th>
+										<th>状态</th>
+
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>2栋电梯电费分摊</td>
+										<td>2016-06-30</td>
+										<td></td>
+										<td>1,567.00</td>
+										<td><input type="text" class="form-control" /></td>
+										<td>10.00</td>
+										<td></td>
+										<td>未分摊</td>
+									</tr>
+									<tr>
+										<td>2栋电梯电费分摊</td>
+										<td>2016-06-30</td>
+										<td></td>
+										<td>1,567.00</td>
+										<td><input type="text" class="form-control" /></td>
+										<td>10.00</td>
+										<td></td>
+										<td>未分摊</td>
+									</tr>
+									<tr>
+										<td>2栋电梯电费分摊</td>
+										<td>2016-06-30</td>
+										<td></td>
+										<td>1,567.00</td>
+										<td><input type="text" class="form-control" /></td>
+										<td>10.00</td>
+										<td></td>
+										<td>未分摊</td>
+									</tr>
+
+								</tbody>
+							</table>
+							<div class="page-container">
+								<ul class="list-unstyled">
+									<li>
+										<a href="">
+											<img src="__TMPL__/public/assets/images/page-a.png" />
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="__TMPL__/public/assets/images/page-aa.png" />
+										</a>
+									</li>
+									<li>
+										<span>1</span>
+									</li>
+									<li>
+										<a href="">
+											<img src="__TMPL__/public/assets/images/page-bb.png" />
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="__TMPL__/public/assets/images/page-b.png" />
+										</a>
+									</li>
+									<div class="page-content">
+										<select>
+											<option>20</option>
+											<option>50</option>
+											<option>100</option>
+									</select>
+										<label>
+											每页
+										</label>
+									</div>
+
+								</ul>
+
+							</div>
+							<div class="col-sm-12 date">
+								<label>
+								抄表日期：
+								</label>
+								<input type="text" name="datepicker" id="datetimepicker2" class="form-control" value="2017-06-30"  placeholder="请输入抄表日期" />
+							</div> 
+							<div class="col-sm-12 btn-content">
+								<button type="submit" class="btn btn-primary btn-save">
+							保存
+							</button>
+								<button type="" class="btn btn-primary  btn-return">
+							返回
+							</button>
+
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(function() {
+				$('#myTab li:eq(0) a').tab('show');
+				//当点击出现一个新建页面时，可以用此方法
+				$('.btn-return').click(function() {
+					var url = 'readingmeter.html';
+					window.location.href = url + '?returnUrl=http://wip2.coevery.cn/Coevery.Contract/Contract';
+				});
+				$("#checkAll").click(function() {
+					$("input[name='imgVo']:checkbox").prop("checked", this.checked);
+				});
+				$("#datetimepicker1").on("click", function(e) {
+					e.stopPropagation();
+					$(this).lqdatetimepicker({
+						css: 'datetime-day',
+						dateType: 'D',
+						selectback: function() {}
+					});
+				});
+				$("#datetimepicker2").on("click", function(e) {
+					e.stopPropagation();
+					$(this).lqdatetimepicker({
+						css: 'datetime-day',
+						dateType: 'D',
+						selectback: function() {}
+					});
+				});
+			});
+		</script>
+
+	</body>
+
+</html>

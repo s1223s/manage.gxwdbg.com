@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="__TMPL__/public/assets/themes/flatadmin/lq.datetimepick.css" />
+		<link href="__TMPL__/public/assets/themes/flatadmin/bootstrap.min.css" rel="stylesheet">
+		<link href="__TMPL__/public/assets/themes/flatadmin/main.css" rel="stylesheet">
+		<script src="__TMPL__/public/assets/js/jquery.js" type="text/javascript"></script>
+		<script src='__TMPL__/public/assets/js/selectUi.js' type='text/javascript'></script>
+		<script src='__TMPL__/public/assets/js/lq.datetimepick.js' type='text/javascript'></script>
+		<script src="__TMPL__/public/assets/js/bootstrap.min.js"></script>
+		<title></title>
+	</head>
+
+	<body>
+		<div class="main-content building-management">
+			<!--<ul class="nav nav-tabs" id="myTab">
+				<li class="active">
+					<a href="#building" data-toggle="tab" class="building">
+						车库档案
+					</a>
+				</li>
+				<li>
+					<a href="#house" data-toggle="tab" class="house">
+						车位档案
+					</a>
+				</li>
+			</ul>-->
+			<div id="myTabContent" class="tab-content">
+				<div class="tab-pane fade in active" id="building">
+					<div class="sec1">
+						<div class="col-md-12">
+							<div class="pull-left">
+								<p class="btn btn-default" id="add">
+									新建
+								</p>
+								<p class="btn btn-default" id="revise" disabled="true">
+									编辑
+								</p>
+								<p class="btn btn-default" disabled="true" id="table">
+									换表
+								</p>
+								<p class="btn btn-default" disabled="true" id="delete">
+									删除
+								</p>
+								<p class="btn btn-default" id="addition">
+									批量添加
+								</p>
+							</div>
+							<div class="pull-right">
+								<form class="navbar-form" role="search" action="/search" method="get">
+									<div class="form-group">
+										<input name="k" type="text" class="form-control" placeholder="Please enter a keyword">
+									</div>
+									<button type="submit" class="btn btn-default">
+                                <img data-original="__TMPL__/public/assets/images/soso.png" src="__TMPL__/public/assets/images/icon_7.png" alt="__TMPL__/public/assets/images/soso.png" /></button>
+								</form>
+							</div>
+						</div>
+						<!--房间仪表管理 内容 start-->
+						<div id="builing-content">
+							<div class="col-md-12">
+								<div class="pull-right">
+									<label class="h4">每页显示</label>
+									<select>
+
+										<option value="">
+											50
+										</option>
+										<option value="">
+											100
+										</option>
+									</select>
+									<label class="h4">条</label>
+								</div>
+							</div>
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th><input type="checkbox" id="checkAll" /></th>
+										<th>仪表名称</th>
+										<th>仪表类型</th>
+										<th>小区名称</th>
+										<th>楼宇管理</th>
+										<th>房间代码</th>
+										<th>倍率</th>
+										<th>最大读数</th>
+										<th>初始读数</th>
+										<th>初始日期</th>
+										<th>总表</th>
+										<th>可用状态</th>
+
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><input type="checkbox" name="imgVo" value="${imgVo.fileName}" /></td>
+										<td>水表</td>
+										<td>水表</td>
+										<td>丽景花园</td>
+										<td>2栋</td>
+										<td>2-2-1001</td>
+										<td>1</td>
+										<td>9999</td>
+										<td>111</td>
+										<td>2017-08-09 </td>
+										<td></td>
+										<td>可用</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" name="imgVo" value="${imgVo.fileName}" /></td>
+										<td>水表</td>
+										<td>水表</td>
+										<td>丽景花园</td>
+										<td>2栋</td>
+										<td>2-2-1001</td>
+										<td>1</td>
+										<td>9999</td>
+										<td>111</td>
+										<td>2017-08-09 </td>
+										<td></td>
+										<td>可用</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" name="imgVo" value="${imgVo.fileName}" /></td>
+										<td>水表</td>
+										<td>水表</td>
+										<td>丽景花园</td>
+										<td>2栋</td>
+										<td>2-2-1001</td>
+										<td>1</td>
+										<td>9999</td>
+										<td>111</td>
+										<td>2017-08-09 </td>
+										<td></td>
+										<td>可用</td>
+									</tr>
+
+								</tbody>
+							</table>
+							<div class="pull-right">
+								<nav class="text-right page-nav">
+									<div class="pagination"><span id="Content_pager">
+									<a href="">上一页</a>&nbsp;&nbsp;&nbsp;
+									<span class="span">1</span>
+										<a href="" class="span">2</a>
+										<a href="" class="span">3</a>
+										<a href="">下一页</a>&nbsp;
+										</span>
+									</div>
+								</nav>
+							</div>
+						</div>
+						<!--房间仪表管理  内容 end-->
+
+						<!--房间仪表管理 新建 start-->
+						<div class="building-add" id="building-add">
+							<div class="col-md-12 return-a">
+								<a href="roominstrument.html">
+									返回列表
+								</a>
+							</div>
+							<div class="add-content col-md-12">
+								<div class="parkingspace row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label class="h4">
+											房间：
+										</label>
+											<input type="text" class="form-control" placeholder="房间代码/车位号/业主姓名/电话号码" />
+											<button type="submit" class="btn btn-default">
+                                <img data-original="__TMPL__/public/assets/images/soso.png" src="__TMPL__/public/assets/images/icon_7.png" alt="__TMPL__/public/assets/images/soso.png" /></button>
+										</div>
+										<div class="form-group">
+											<label class="h4">
+												仪表名称：
+											</label>
+											<input type="text" class="form-control a" placeholder="请输入仪表名称" />
+
+										</div>
+										<div class="form-group">
+											<label class="h4">
+												初始读数：
+											</label>
+											<input type="text" class="form-control a" placeholder="请输入初始读数" />
+
+										</div>
+										<div class="form-group">
+											<label class="h4">
+												初始日期：
+											</label>
+											<input type="text" name="datepicker" id="datetimepicker1" class="form-control" value="请选择初始日期" />
+
+										</div>
+										<div class="form-group">
+											<div class="col-sm-6">
+												<input type="checkbox" name="" />
+												<label class="h4" style="width: 100px;">
+												是否主表
+											</label>
+											</div>
+											<div class="col-sm-6">
+												<input type="checkbox" name="" />
+												<label class="h4" style="width: 50px;">
+												抄表
+											</label>
+											</div>
+
+										</div>
+
+									</div>
+									<div class="col-md-6">
+
+										<div class="form-group">
+											<label class="h4">
+												仪表类型：
+											</label>
+											<select>
+												<option value="">请选择仪表类型</option>
+												<option value="">1</option>
+												<option value="">2</option>
+												<option value="">3</option>
+											</select>
+
+										</div>
+
+										<div class="form-group">
+											<label class="h4">
+												最大读数：
+											</label>
+											<input type="text" class="form-control a" placeholder="请输入最大读数" />
+
+										</div>
+										<div class="form-group">
+											<label class="h4">
+												倍率：
+											</label>
+											<input type="text" class="form-control a" placeholder="请输入倍率" />
+
+										</div>
+										<div class="form-group">
+											<label class="h4">
+												总表：
+											</label>
+											<input type="text" class="form-control a" placeholder="" />
+
+										</div>
+									</div>
+									<div class="pull-right">
+										<button type="submit" class="btn btn-default">确定</button>
+										<button type="submit" class="btn btn-default export">取消</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--房间仪表管理 新建 end-->
+
+						<!--房间仪表管理 编辑 start-->
+						<div class="building-add building-revise">
+							<div class="col-md-12 return-a">
+								<a href="roominstrument.html">
+									返回列表
+								</a>
+							</div>
+							<div class="add-content col-md-12">
+								<div class="parkingspace row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label class="h4">
+											房间：
+										</label>
+											<input type="text" class="form-control" placeholder="2-2-1001 陈芬" />
+											<button type="submit" class="btn btn-default">
+                                <img data-original="__TMPL__/public/assets/images/soso.png" src="__TMPL__/public/assets/images/icon_7.png" alt="__TMPL__/public/assets/images/soso.png" /></button>
+										</div>
+										<div class="form-group">
+											<label class="h4">
+												仪表名称：
+											</label>
+											<input type="text" class="form-control a" placeholder="水表" />
+
+										</div>
+										<div class="form-group">
+											<label class="h4">
+												初始读数：
+											</label>
+											<input type="text" class="form-control a" placeholder="250" />
+
+										</div>
+										<div class="form-group">
+											<label class="h4">
+												初始日期：
+											</label>
+											<input type="text" name="datepicker" id="datetimepicker2" class="form-control" value="2017-02-04" />
+
+										</div>
+										<div class="form-group">
+											<div class="col-sm-6">
+												<input type="checkbox" name="" />
+												<label class="h4" style="width: 100px;">
+												是否主表
+											</label>
+											</div>
+											<div class="col-sm-6">
+												<input type="checkbox" name="" />
+												<label class="h4" style="width: 50px;">
+												抄表
+											</label>
+											</div>
+
+										</div>
+
+									</div>
+									<div class="col-md-6">
+
+										<div class="form-group">
+											<label class="h4">
+												仪表类型：
+											</label>
+											<select>
+												<option value="">水表</option>
+												<option value="">水表</option>
+												<option value="">电表</option>
+											</select>
+
+										</div>
+
+										<div class="form-group">
+											<label class="h4">
+												最大读数：
+											</label>
+											<input type="text" class="form-control a" placeholder="9999.9" />
+
+										</div>
+										<div class="form-group">
+											<label class="h4">
+												倍率：
+											</label>
+											<input type="text" class="form-control a" placeholder="1.00" />
+
+										</div>
+										<div class="form-group">
+											<label class="h4">
+												总表：
+											</label>
+											<select>
+												<option value=""></option>
+												<option value="">1</option>
+												<option value="">2</option>
+												<option value="">3</option>
+											</select>
+
+										</div>
+									</div>
+									<div class="pull-right">
+										<button type="submit" class="btn btn-default">确定</button>
+										<button type="submit" class="btn btn-default export">取消</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--房间仪表管理 编辑 end-->
+
+						<!--房间仪表管理 换表start-->
+						<div class="building-add building-table">
+							<div class="col-md-12 return-a">
+								<a href="roominstrument.html">
+									返回列表
+								</a>
+							</div>
+							<div class="add-content col-md-12">
+								<div class="parkingspace row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label class="h4">
+											房间：
+										</label>
+											<input type="text" class="form-control" placeholder="2-2-1001 陈芬" />
+											<button type="submit" class="btn btn-default">
+                                <img data-original="__TMPL__/public/assets/images/soso.png" src="__TMPL__/public/assets/images/icon_7.png" alt="__TMPL__/public/assets/images/soso.png" /></button>
+										</div>
+										<div class="form-group">
+											<label class="h4">
+												原仪表名称：
+											</label>
+											<input type="text" class="form-control a" placeholder="水表" />
+
+										</div>
+										<div class="form-group">
+											<label class="h4">
+												原仪表上次读数：
+											</label>
+											<input type="text" class="form-control a" placeholder="250" />
+
+										</div>
+										<div class="form-group">
+											<label class="h4">
+												原仪表更换时读数：
+											</label>
+											<input type="text" class="form-control a" placeholder="0" />
+
+										</div>
+										<div class="form-group">
+											<label class="h4">
+												新仪表名称：
+											</label>
+											<input type="text" class="form-control a" placeholder="0" />
+
+										</div>
+										<div class="form-group">
+											<label class="h4">
+												新仪表最大读数：
+											</label>
+											<input type="text" class="form-control a" placeholder="0" />
+
+										</div>
+
+									</div>
+									<div class="col-md-6">
+
+										<div class="form-group">
+											<label class="h4">
+												仪表类型：
+											</label>
+											<select>
+												<option value="">水表</option>
+												<option value="">水表</option>
+												<option value="">电表</option>
+											</select>
+
+										</div>
+										<div class="form-group">
+											<label class="h4">
+												原仪表上次读数日期：
+											</label>
+											<input type="text" name="datepicker" id="datetimepicker3" class="form-control" value="2017-02-04" />
+
+										</div>
+										<div class="form-group">
+											<label class="h4">
+												更换日期：
+											</label>
+											<input type="text" name="datepicker" id="datetimepicker4" class="form-control" value="2017-02-04" />
+
+										</div>
+
+										<div class="form-group">
+											<label class="h4">
+												新仪表初始读数：
+											</label>
+											<input type="text" class="form-control a" placeholder="请输入初始读数" />
+
+										</div>
+										<div class="form-group">
+											<label class="h4">
+												倍率：
+											</label>
+											<input type="text" class="form-control a" placeholder="1.00" />
+
+										</div>
+
+									</div>
+									<div class="pull-right">
+										<button type="submit" class="btn btn-default">确定</button>
+										<button type="submit" class="btn btn-default export">取消</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--房间仪表管理 换表 end-->
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		</div>
+		</div>
+		<script>
+			$(function() {
+				$('#myTab li:eq(0) a').tab('show');
+				$("#checkAll").click(function() {
+					$("input[name='imgVo']:checkbox").prop("checked", this.checked);
+				});
+				$('#add').click(function() { //新建点击事件
+					$('#building-add').show(); //仪表类型新建页面展开
+					$('#builing-content').hide(); //仪表类型内容隐藏
+					$('.building-revise').hide(); //仪表类型内编辑隐藏
+						$('.building-table').hide(); //仪表类型换表隐藏
+				});
+				$("input[name='imgVo']:checkbox").click(function() {
+					$("#revise").attr("disabled", false);
+					$('#revise').click(function() { //编辑点击事件
+						$('.building-revise').show(); //仪表类型编辑页面展开
+						$('#builing-content').hide(); //仪表类型内容隐藏
+						$('#building-add').hide(); //仪表类型新建内容隐藏
+						$('.building-table').hide(); //仪表类型换表内容隐藏
+					});
+				});
+				$("input[name='imgVo']:checkbox").click(function() {
+					$("#table").attr("disabled", false);
+					$('#table').click(function() { //编辑点击事件
+						$('.building-table').show(); //仪表类型编辑页面展开
+						$('#builing-content').hide(); //仪表类型内容隐藏
+						$('#building-add').hide(); //仪表类型新建内容隐藏
+						$('.building-revise').hide(); //仪表类型编辑页面展开
+					});
+				});
+				$("#datetimepicker1").on("click", function(e) {
+					e.stopPropagation();
+					$(this).lqdatetimepicker({
+						css: 'datetime-day',
+						dateType: 'D',
+						selectback: function() {
+						}
+					});
+				});
+				$("#datetimepicker2").on("click", function(e) {
+					e.stopPropagation();
+					$(this).lqdatetimepicker({
+						css: 'datetime-day',
+						dateType: 'D',
+						selectback: function() {
+						}
+					});
+				});
+				$("#datetimepicker3").on("click", function(e) {
+					e.stopPropagation();
+					$(this).lqdatetimepicker({
+						css: 'datetime-day',
+						dateType: 'D',
+						selectback: function() {
+						}
+					});
+				});
+				$("#datetimepicker4").on("click", function(e) {
+					e.stopPropagation();
+					$(this).lqdatetimepicker({
+						css: 'datetime-day',
+						dateType: 'D',
+						selectback: function() {
+						}
+					});
+				});
+			});
+		</script>
+	</body>
+
+</html>

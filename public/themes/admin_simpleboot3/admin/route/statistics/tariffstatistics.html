@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="__TMPL__/public/assets/themes/flatadmin/lq.datetimepick.css" />
+		<link href="__TMPL__/public/assets/themes/flatadmin/bootstrap.min.css" rel="stylesheet">
+		<link href="__TMPL__/public/assets/themes/flatadmin/main.css" rel="stylesheet">
+		<script src="__TMPL__/public/assets/js/jquery.js" type="text/javascript"></script>
+		<script src='__TMPL__/public/assets/js/selectUi.js' type='text/javascript'></script>
+		<script src='__TMPL__/public/assets/js/lq.datetimepick.js' type='text/javascript'></script>
+		<script src="__TMPL__/public/assets/js/bootstrap.min.js"></script>
+		<title></title>
+	</head>
+
+	<body>
+		<div class="main-content statistics three-statistics water-statistics tariff-statistics">
+			<div class="sec1">
+				<form>
+					<div class="form-group">
+						<ul class="list-unstyled row">
+							<li class="col-md-2">
+								<label class="h4">
+									住房编号：
+								</label>
+								<input type="text" class="form-control" />
+							</li>
+							<li class="col-md-2">
+								<label class="h4">
+									业主姓名：
+								</label>
+								<input type="text" class="form-control" />
+							</li>
+							<li class="col-md-2">
+								<label class="h4">
+									编号：
+								</label>
+								<input type="text" class="form-control" />
+							</li>
+							<li class="col-md-2">
+								<label class="h4">
+									起始时间：
+								</label>
+								<input type="text" class="form-control" id="Starttime" />
+							</li>
+							<li class="col-md-2">
+								<label class="h4">
+									截止时间：
+								</label>
+								<input type="text" class="form-control" id="Endtime" />
+							</li>
+							<li class="col-md-2">
+								<button class="btn btn-default">查询</button>
+							</li>
+						</ul>
+					</div>
+				</form>
+			</div>
+			<div class="sec2">
+				<div class="pull-left">
+					<button class="btn btn-default">
+						导出数据
+					</button>
+					<button class="btn btn-default">
+						打印抄表卡
+					</button>
+				</div>
+			
+				<div class="pull-right">
+					<form>
+						<label class="h4">每页显示</label>
+						<select>
+							<option>50</option>
+							<option>100</option>
+						</select>
+						<label class="h4">条</label>
+					</form>
+				</div>
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>住房编号</th>
+							<th>编号</th>
+							<th>业主姓名</th>
+							<th>费用类型</th>
+							<th>起始时间</th>
+							<th>截止时间</th>
+							<th>上次刻度</th>
+							<th>本兮刻度</th>
+							<th>单价</th>
+							<th>金额</th>
+							<th>状态</th>
+							<th>操作</th>
+							<th>备注</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1-1-701</td>
+							<td>010101</td>
+							<td>***</td>
+							<td>电费</td>
+							<td>2017-07-08</td>
+							<td>2017-08-05</td>
+
+							<td>320</td>
+							<td>450</td>
+							<td>1.5</td>
+							<td>195</td>
+							<td>已交</td>
+
+							<td>
+								<a href="#">
+									缴费
+								</a>
+								<a href="#">
+									修改
+								</a>
+								<a href="#">
+									删除
+								</a>
+							</td>
+							<td>2017-9-9已交齐</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="pull-right">
+					<nav class="text-right page-nav">
+						<div class="pagination"><span id="Content_pager">
+									<a href="">上一页</a>&nbsp;&nbsp;&nbsp;
+									<span class="span">1</span>
+							<a href="" class="span">2</a>
+							<a href="" class="span">3</a>
+							<a href="">下一页</a>&nbsp;
+							</span>
+						</div>
+					</nav>
+				</div>
+
+			</div>
+			
+		</div>
+		<script>
+			$(function() {
+				$("#Starttime").on("click", function(e) {
+					e.stopPropagation();
+					$(this).lqdatetimepicker({
+						css: 'datetime-day',
+						dateType: 'D',
+						selectback: function() {}
+					});
+				});
+				$("#Endtime").on("click", function(e) {
+					e.stopPropagation();
+					$(this).lqdatetimepicker({
+						css: 'datetime-day',
+						dateType: 'D',
+						selectback: function() {}
+					});
+				});
+			});
+		</script>
+
+	</body>
+
+</html>
