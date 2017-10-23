@@ -12,7 +12,7 @@ class OwnerController extends AdminBaseController
      public function add()
     {
     	$listObj = db('houses');
-		$whereprovince['level'] = xq;
+		$whereprovince['level'] = x;
 		$listprovince = $listObj->where($whereprovince)->select();
 		//var_dump($listprovince);
 		$this->assign("province_list",$listprovince);
@@ -31,7 +31,7 @@ class OwnerController extends AdminBaseController
 	public function get_district(){
 		$listObj = db('houses');
 		$where['parentid'] = input('city_id');
-		$where['level'] = dy;
+		$where['level'] = y;
 		$list = $listObj->where($where)->select();
 		$data=array('status'=>0,'district'=>$list);
 		header("Content-type: application/json");
@@ -59,10 +59,10 @@ class OwnerController extends AdminBaseController
 
 	 public function addPost()
     {
-    	$ownerid = $this->request->param("ownerid");
-		$ownernumber = $this->request->param("ownernumber");
-		$Roomno = $this->request->param("Roomno");
-		$Address = $this->request->param("address");
+    	 //$ownerid = $this->request->param("ownerid");
+		//$ownernumber = $this->request->param("ownernumber");
+		echo $District = $this->request->param("province_id");
+		/*$Address = $this->request->param("address");
 		$phonenumber = $this->request->param("phonenumber");
 		$landline = $this->request->param("landline");
 		$phonename = $this->request->param("phonename");
@@ -105,7 +105,7 @@ class OwnerController extends AdminBaseController
                         "propertyfeedate"  => $Propertyfeedate,
                         "garbageclearancefee" => $Garbageclearancefee,
                         'remarks' => $Remarks,
-                    ]);
+                    ]);*/
   	}
 }
 ?>

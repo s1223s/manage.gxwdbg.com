@@ -39,28 +39,28 @@
             <select name="province_id" id="province_id" style="width:150px;">
               <option>请选择</option>
                   <volist name="province_list" id="province">
-                    <option  value="{$province.houseid}">{$province.District}</option>
+                    <option  value="{$province.houseid}" name="{$province.houseid}" >{$province.District}</option>
                   </volist>                                                  
                </select>
                 <label>栋:</label>
                <select name="city_id"  id="city_id" style="width:150px;" >
                <option>请选择</option>
                <volist name="city_list" id="city">
-                <option value="{$city.houseid}" selected="selected">{$city.Roomno}</option>
+                <option value="{$city.houseid}" name="{$city.houseid}" selected="selected">{$city.Roomno}</option>
                </volist>                                               
               </select>
                <label>单元:</label>
               <select name="district_id"  id="district_id" style="width:150px;" >
                 <option value="0">请选择</option>
                 <volist name="dis_list" id="dis">
-                 <option value="{$dis.houseid}" selected="selected">{$dis.Roomno}</option>
+                 <option value="{$dis.houseid}" name="{$dis.houseid}" selected="selected">{$dis.Roomno}</option>
                 </volist>                                              
                </select>
                <label>房号:</label>
               <select name="room_id"  id="room_id" style="width:150px;" >
                 <option>请选择</option>
                 <volist name="rom_list" id="rom">
-                 <option value="{$rom.houseid}" selected="selected">{$rom.Roomno}</option>
+                 <option value="{$rom.houseid}" name="{$rom.houseid}" selected="selected">{$rom.Roomno}</option>
                 </volist>                                              
                </select>    
           </div>

@@ -8,9 +8,33 @@ use app\admin\model\AdminMenuModel;
 class EquipmentController extends AdminBaseController
 {
 
+		public function get_citys(){
+		$listObj = db('houses');
+		$where['topparentid'] = input('province_id');
+		$where['level'] = d;
+		$list = $listObj->where($where)->select();
+		$data=array('status'=>0,'city'=>$list);
+		header("Content-type: application/json");
+		exit(json_encode($data));
+	}
+	//获取地级县
+	public function get_district(){
+		$listObj = db('houses');
+		$where['parentid'] = input('city_id');
+		$where['level'] = y;
+		$list = $listObj->where($where)->select();
+		$data=array('status'=>0,'district'=>$list);
+		header("Content-type: application/json");
+		exit(json_encode($data));
+	}
 	public function building()
 			{
-				return view('building');
+				$listObj = db('houses');
+		$whereprovince['level'] = x;
+		$listprovince = $listObj->where($whereprovince)->select();
+		//var_dump($listprovince);
+		$this->assign("province_list",$listprovince);
+        return $this->fetch();
 			}
 	public function parking()
 			{
@@ -25,15 +49,16 @@ class EquipmentController extends AdminBaseController
 				return view('warranty');
 			}
 	public function addbuilding()
-			{
-				$district = $this->request->param("District");
-				$dong = $this->request->param("Dong");
-				$unit = $this->request->param("Unit");
+			{	
+				
+				$district = $this->request->param("province_id");
+				$dong = $this->request->param("city_id");
+				$unit = $this->request->param("district_id");
 				$roomno = $this->request->param("Roomno");
 				$area = $this->request->param("Area");
 				$remarks = $this->request->param("Remarks");
-				$houseid = '0'.$dong.$unit.$roomno;
-			
+				$houseid = $unit.'f'.$roomno;
+				
 
 				if(empty($district) || empty($dong) || empty($unit) || empty($roomno) || empty($area))
 		    {
@@ -45,13 +70,14 @@ class EquipmentController extends AdminBaseController
 		    }
 
 		   Db::name('houses')->insert([
-	                        "District"  => $district,
-	                        "Dong"   => $dong,
-	                        "Unit"  => $unit,
-							"Roomno" => $roomno,
-	                        "Area" => $area,
-							"Remarks" => $remarks,
-							"houseid" => $houseid                   
+		   					"houseid" => $houseid,
+		   					"level" => 'f',
+		   					"parentid" => $unit,
+		   					"topparentid" => $district,
+		   					"Area" => $area,
+		   					"Roomno" => $roomno,
+	                        "District"  => "华益小区",
+	                                         
 	                    ]);
 		   echo "<script> alert('添加成功！'); </script>";
 		    	return view('building');
